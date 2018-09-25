@@ -14,7 +14,7 @@ namespace SampleWebApi.Controllers
             {
                 if (n < 0)
                 {
-                    return Fibonacci(Math.Abs(n)) * -1 * 1;
+                    return Fibonacci(Math.Abs(n)) * -1;
                 }
 
                 return Fibonacci(n);
