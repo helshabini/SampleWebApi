@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: samplepy-deployment
+  labels:
+    app: samplepy
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: samplepy
+  template:
+    metadata:
+      labels:
+        app: samplepy
+    spec:
+      containers:
+      - name: samplepy
+        image: helshabini/samplewebapi:latest
+        ports:
+        - containerPort: 80
