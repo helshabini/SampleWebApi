@@ -10,7 +10,7 @@ namespace SampleWebApi.Controllers
         [HttpGet]
         public ActionResult<string> Get()
         {
-            return "V.1.5";
+            return "V.2.6";
         }
     }
 }
