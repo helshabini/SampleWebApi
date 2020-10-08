@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Swashbuckle.AspNetCore.Swagger;
+using Microsoft.OpenApi.Models;
 
 namespace SampleWebApi
 {
@@ -23,7 +23,7 @@ namespace SampleWebApi
 
             services.AddSwaggerGen(c =>
             {
-                c.SwaggerDoc("v1", new Info { Title = "Sample Web API", Version = "v1" });
+                c.SwaggerDoc("v1", new OpenApiInfo { Title = "Sample Web API", Version = "v1" });
             });
         }
 

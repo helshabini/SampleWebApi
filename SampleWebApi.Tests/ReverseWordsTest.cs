@@ -55,5 +55,12 @@ namespace SampleWebApi.Tests
             ReverseWordsController sut = new ReverseWordsController();
             Assert.Equal("شسيب شسيب", sut.Get("بيسش بيسش"));
         }
+
+        [Fact]
+        public void CanHandleOneWord()
+        {
+            ReverseWordsController sut = new ReverseWordsController();
+            Assert.Equal("pleh", sut.Get("help"));
+        }
     }
 }
